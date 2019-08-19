@@ -12,7 +12,7 @@
 #ifndef __STATS_H__
 #define __STATS_H__
 
-void print_statistics();
+void print_statistics(int median, int maximum, int minimim, int mean);
 
 	/**
  *  * @brief <This function takes an array of numbers and print all the estatistics

@@ -16,7 +16,7 @@
 * 	    * then calculates the mean, median, maximum and minimum
 *       *  values of the array.>
 *        * @author <Jose Arguello>
-*         * @date <08/16/2019>
+	*         * @date <08/16/2019>
 *          *
 *           */
 
@@ -35,7 +35,7 @@ void main(){
 
 
     /* Other Variable Declarations Go Here */
-		float median = 0;
+		int median = 0, maximum = 0, minimum = 0, mean = 0;
 
     /* Statistics and Printing Functions Go Here */
 
@@ -47,9 +47,22 @@ void main(){
 
 		median = find_median(a, SIZE);
 
+		maximum = find_maximum(a, SIZE);
+		minimum = find_minimum(a, SIZE);
+		mean = find_mean(a, SIZE);
+
+		print_statistics(median, maximum, minimum, mean);
 	}
 
 /* Add other Implementation File Code Here */
+	void print_statistics(int s1, int s2, int s3, int s4){
+		printf("\n\n*Here are all the statistics\n");
+		printf("Median: %d\n",s1);
+		printf("Maximum: %d\n",s2);
+		printf("Minimum: %d\n",s3);
+		printf("Mean: %d\n",s4);
+	}
+
 
 	void print_array(unsigned char array[], int length){
 
@@ -84,7 +97,7 @@ void main(){
 
 	int find_median(unsigned char array[], int length){
 	// this function will be used once the array is already sorted.
-		float median = 0;
+		int median = 0;
 	//The number of elements is even, the formula for a median for an even
 	// number of elements is: 
 		median = (array[(length-1)/2] + array[length/2])/2.0;
@@ -92,14 +105,39 @@ void main(){
 
 	}
 
-	int find_maximum(unsigned char array[], int lentgh){
+	int find_maximum(unsigned char array[], int length){
 
+		int i, maximum = array[0];
+
+		for(i = 1; i < length; i++){
+
+			if(array[i] > maximum){
+				maximum = array[i];
+			}
+		}
+
+		return maximum; 
 	}
 
-	int find_minimum(unsigned char array[], int lentgh){
+	int find_minimum(unsigned char array[], int length){
+		int i, minimum = array[0];
 
+		for(i = 1; i < length; i++){
+			if(array[i] < minimum){
+				minimum = array[i];
+			}
+		}
+
+		return minimum; 
 	}
 
 	int find_mean(unsigned char array[], int length){
+		int i = 0, summ = 0, mean = 0;
+		for(i = 0; i < length; i++){
+			summ += array[i];
+		}
 
+		mean = summ/length;
+
+		return mean;
 	}

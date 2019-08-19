@@ -14,7 +14,7 @@
 
 void print_statistics();
 
-/**
+	/**
  *  * @brief <This function takes an array of numbers and print all the estatistics
  *   * which are the median, mean, maximum and minimum on screen>
  *    *
@@ -27,7 +27,7 @@ void print_statistics();
  *           * @return <All the statistics of the array printed on screen.>
  *            */
 
-void print_array();
+void print_array(unsigned char array[], int length);
 
 /**
  *  * @brief <This function takes an array of numbers and print it on screen>
@@ -41,7 +41,7 @@ void print_array();
  *          * @return <All the elements of the array printed on screen>
  *           */
 
-int find_median();
+int find_median(unsigned char array[], int length);
 
 /**
  *  * @brief <Finds the median of an array>
@@ -54,7 +54,7 @@ int find_median();
  *         * @return <The median of the array.>
  *          */
 
-int find_mean();
+int find_mean(unsigned char array[], int length);
 
 /**
  *  * @brief <Finds the mean of an array>
@@ -67,7 +67,7 @@ int find_mean();
  *         * @return <The mean of the array.>
  *          */
 
-int find_maximum();
+int find_maximum(unsigned char array[], int lentgh);
 
 /**
  *  * @brief <Finds the maximum number of an array>
@@ -80,7 +80,7 @@ int find_maximum();
  *         * @return <The maximum number of the array.>
  *          */
 
-int find_minimum();
+int find_minimum(unsigned char array[], int lentgh);
 
 /**
  *  * @brief <Finds the minimum number of an array>
@@ -93,7 +93,7 @@ int find_minimum();
  *         * @return <The minimum number of the array.>
  *          */
 
-void sort_array();
+void sort_array(unsigned char array[], int length);
 
 /**
  *  * @brief <This function takes an array of numbers and  sort from the maximum to the minimum
